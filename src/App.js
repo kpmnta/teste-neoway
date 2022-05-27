@@ -9,7 +9,7 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(`https://newsapi.org/v2/everything?q=Apple&from=${date}&sortBy=popularity&apiKey=${API_KEY}`)
+    fetch(`https://newsapi.org/v2/everything?q=Apple&from=${date}&sortBy=popularity&apiKey=${API_KEY}&pageSize=100`)
      .then((response) => response.json())
      .then((actualData) => {
        console.log('actual', actualData)
