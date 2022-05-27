@@ -21,12 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      <ul>
+      <ul className="container">
       {data &&
           data.map(({ id, title, urlToImage }) => (
-            <li key={id}>
-              <h3>{title}</h3>
-              <img src={urlToImage}/>
+            <li className="container__list" key={id}>
+              <h3 className="container__heading">{title}</h3>
+              <img className="container__image"src={urlToImage}/>
             </li>
           ))}
       </ul>
