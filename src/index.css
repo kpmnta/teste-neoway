@@ -4,6 +4,10 @@
 :root {
   --fontHeading: 'Roboto Slab', serif; 
   --fontBody: 'Montserrat', sans-serif; 
+  --colorBg: #0e1217;
+  --colorAccent: #1f003b;
+  --colorText: #f2e9e4;
+  --colorPurple: #5a189a;
 }
 
 *, 
@@ -16,12 +20,15 @@
 
 body {
   font-size: 62.5%;
+  background-color: var(--colorBg);
+  color: var(--colorText)
 }
 
 ul {
   list-style: none;
 }
 
-a {
+a, button {
   text-decoration: none;
+  cursor: pointer;
 }
