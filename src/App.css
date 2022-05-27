@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
+}
+
+.container__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 16px;
+  max-width: 30vw;
+  min-width: 170px;
+  min-height: 220px;
+  padding: 20px 10px;
+  border-radius: 30px;
+  background-color: #c6c6c6;
+  cursor: pointer;
+  filter: grayscale(85%);
+  transition: filter 300ms;
+}
+
+.container__list:hover {
+  filter: grayscale(0%);
+}
+
+.container__heading {
+  font-family: var(--fontHeading);
+}
+
+.container__image {
+  border-radius: 30px;
+  max-width: calc(30vw - 20px);
+  min-width: 150px;
+}
