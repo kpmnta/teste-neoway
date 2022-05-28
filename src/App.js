@@ -25,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Your favourite news outlet!</h1>
       <FilterInput 
         setQuery={setQuery}
       />

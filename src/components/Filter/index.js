@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './styles.css'
 
 const FilterInput = ({setQuery}) => {
     const [search, setSearch] = useState('');
@@ -22,7 +23,7 @@ const FilterInput = ({setQuery}) => {
             onChange={ updateSearch }
             placeholder="digite"
             />
-            <button className="search__button">busca</button>
+            <button className="search__button">Buscar</button>
       </form>
     );
 }

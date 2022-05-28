@@ -1,8 +1,16 @@
+h1 {
+  font-family: var(--fontBody);
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
 .container{
   display: flex;
   flex-wrap: wrap;
   gap: 3vw;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .container__list {
@@ -15,7 +23,7 @@
   min-height: 220px;
   padding: 20px 10px;
   border-radius: 30px;
-  background-color: #c6c6c6;
+  background-color: var(--colorAccent);
   cursor: pointer;
   filter: grayscale(85%);
   transition: filter 300ms;
