@@ -31,12 +31,10 @@ h1 {
 .container__author {
   font-size: 0.75rem;
   font-family: var(--fontBody);
-  text-overflow:ellipsis
 }
 
 .container__heading {
   font-family: var(--fontHeading);
-  text-overflow:ellipsis
 }
 
 .container__image {
