@@ -35,3 +35,14 @@ input[type="text"] {
     font-weight: 600;
     letter-spacing: 2px;
 }
+
+
+@media (max-width: 756px) {
+    .search {
+        width: 80vw;
+    }
+    
+    .search__button{
+        letter-spacing: normal;
+    }
+}
