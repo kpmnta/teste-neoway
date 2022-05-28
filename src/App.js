@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Sua fonte de notícias favorita!</h1>
+      <h1>Your favourite news outlet!</h1>
       <FilterInput 
         setQuery={setQuery}
       />
