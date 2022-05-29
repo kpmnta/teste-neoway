@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import FilterInput from './components/Filter';
+import OrderBy from './components/OrderBy';
 
 function App() {
   const API_KEY = "cd3fbaf6482e418e83ff450578540d57"; 
@@ -44,6 +45,10 @@ function App() {
       <h1>Your favourite news outlet!</h1>
       <FilterInput 
         setQuery={setQuery}
+      />
+      <OrderBy 
+        data={data}
+        setData={setData}
       />
       <ul className="container">
       {data &&
