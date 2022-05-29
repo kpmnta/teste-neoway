@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import FilterInput from './components/Filter';
-import OrderBy from './components/OrderBy';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Content from './pages/Content';
 
 function App() {
   const API_KEY = "cd3fbaf6482e418e83ff450578540d57"; 
@@ -22,47 +22,21 @@ function App() {
     }
   }, [query]);
 
-  console.log('data', data)
-
-  const formatDate = (date) => {
-    const splitedDate = date.split('T');
-    const newDate = splitedDate[0].replaceAll('-', '/');
-    return newDate;
-  }
-
-  const formatText = (text) => {
-    if (text && text.length > 80) {
-      let textSize = text.substring(0, 100);
-      textSize = `${textSize}...`
-      return textSize;
-    } else {
-      return text
-    }
-  }
-
   return (
     <div className="App">
-      <h1>Your favourite news outlet!</h1>
-      <section className='filters'>
-        <FilterInput 
-          setQuery={setQuery}
-        />
-        <OrderBy 
-          data={data}
-          setData={setData}
-        />
-      </section>
-      <ul className="container">
-      {data &&
-          data.map(({ id, title, urlToImage, author, publishedAt }) => (
-            <li className="container__list" key={id}>
-              <span className='container__date'>{formatDate(publishedAt)}</span>
-              <h3 className="container__heading">{formatText(title)}</h3>
-              <img className="container__image"src={urlToImage}/>
-              <span className='container__author'>{ author ? `By ${formatText(author)}` : ""}</span>
-            </li>
-          ))}
-      </ul>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={
+            <Home 
+              data={data} 
+              setData={setData} 
+              query={query} 
+              setQuery={setQuery} 
+            />
+          }/>
+          <Route path="/teste" element={<Content />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
