@@ -1,0 +1,18 @@
+
+.button__orderby {
+    padding: 0 16px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--colorPurple);
+    color: var(--colorText);
+    font-family: var(--fontBody);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 756px) {
+    .button__orderby {
+        width: 80vw;
+    }
+}
