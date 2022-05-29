@@ -1,7 +1,6 @@
 .search {
     padding: 0.75rem;
-    width: 50vw;
-    margin: 0 auto;
+    width: 50%;
     border: 1px solid var(--colorPurple);
     border-radius: 15px;
     box-shadow: 0px 5px 9px -2px var(--colorPurple);

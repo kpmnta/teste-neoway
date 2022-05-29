@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import './styles.css'
 
 const OrderBy = ({data, setData}) => {
 
@@ -10,7 +11,7 @@ const OrderBy = ({data, setData}) => {
     }
     return(
         <>
-            <button onClick={handleSort}>Order by Author</button>
+            <button className="button__orderby" onClick={handleSort}>Order by Author</button>
         </>
     );
 }

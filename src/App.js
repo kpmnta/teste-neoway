@@ -43,13 +43,15 @@ function App() {
   return (
     <div className="App">
       <h1>Your favourite news outlet!</h1>
-      <FilterInput 
-        setQuery={setQuery}
-      />
-      <OrderBy 
-        data={data}
-        setData={setData}
-      />
+      <section className='filters'>
+        <FilterInput 
+          setQuery={setQuery}
+        />
+        <OrderBy 
+          data={data}
+          setData={setData}
+        />
+      </section>
       <ul className="container">
       {data &&
           data.map(({ id, title, urlToImage, author, publishedAt }) => (

@@ -5,6 +5,14 @@ h1 {
   margin: 3rem 0;
 }
 
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .container{
   display: flex;
   flex-wrap: wrap;
