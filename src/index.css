@@ -32,3 +32,8 @@ a, button {
   text-decoration: none;
   cursor: pointer;
 }
+
+.App {
+  max-width: 1250px;
+  margin: 0 auto;
+}
