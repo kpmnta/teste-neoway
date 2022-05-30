@@ -34,7 +34,7 @@ function App() {
               setQuery={setQuery} 
             />
           }/>
-          <Route path="/teste" element={<Content />} />
+          <Route path="/content" element={<Content />} />
         </Routes>
       </BrowserRouter>
     </div>
