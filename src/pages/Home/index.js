@@ -4,7 +4,7 @@ import './styles.css';
 import FilterInput from '../../components/Filter';
 import OrderBy from '../../components/OrderBy';
 
-function Home({ data, setData, setQuery }) {
+function Home({ data, setData, setQuery, query }) {
 
   const formatDate = (date) => {
     const splitedDate = date.split('T');
@@ -14,7 +14,7 @@ function Home({ data, setData, setQuery }) {
 
   const formatText = (text) => {
     if (text && text.length > 80) {
-      let textSize = text.substring(0, 100);
+      let textSize = text.substring(0, 80);
       textSize = `${textSize}...`
       return textSize;
     } else {
@@ -23,9 +23,9 @@ function Home({ data, setData, setQuery }) {
   }
 
   return (
-    <>
+    <main className='home'>
       <h1>Your favourite news outlet!</h1>
-      <section className='filters'>
+      <section className='home__filters'>
         <FilterInput 
           setQuery={setQuery}
         />
@@ -34,22 +34,25 @@ function Home({ data, setData, setQuery }) {
           setData={setData}
         />
       </section>
-      <ul className="container">
+      { query ? (
+        <h3 className='home__results'>Showing results for <span>{query}</span></h3>
+      ) : ""}
+      <ul className="home__cards">
       {data &&
           data.map(({ title, urlToImage, author, publishedAt }, index) => (
-          <Link state={{new: data[index]}} to={{
+          <Link className="cards__link" state={{new: data[index]}} to={{
             pathname: "/content"
           }}>
-            <li className="container__list" key={title}>
-                <span className='container__date'>{formatDate(publishedAt)}</span>
-                <h3 className="container__heading">{formatText(title)}</h3>
-                <img className="container__image"src={urlToImage}/>
-                <span className='container__author'>{ author ? `By ${formatText(author)}` : ""}</span>
+            <li className="cards__list" key={title}>
+                <span className='cards__date'>{formatDate(publishedAt)}</span>
+                <h3 className="cards__heading">{formatText(title)}</h3>
+                <img className="cards__image"src={urlToImage}/>
+                <span className='cards__author'>{ author ? `By ${formatText(author)}` : ""}</span>
             </li>
           </Link>
           ))}
       </ul>
-    </>
+    </main>
   );
 }
 

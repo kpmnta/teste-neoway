@@ -23,7 +23,7 @@ const Content = () => {
                 </div>
                 <footer className="content__footer">
                     <Link className="content__footer__backLink" to="/">Go back</Link>
-                    <a className="content__footer__link" href={newsContent.url}>Read All</a>
+                    <a target="_blank" className="content__footer__link" href={newsContent.url}>Read All</a>
                 </footer>
             </article>
         </>

@@ -33,8 +33,19 @@ input[type="text"] {
     font-family: var(--fontBody);
     font-weight: 600;
     letter-spacing: 2px;
+    transition: all 1s ease-out 100ms
 }
 
+.search__button:hover {
+    background-image: linear-gradient(90deg, var(--colorPurple) 0%, var(--colorBg) 49%, var(--colorAccent) 80%, var(--colorPurple) 100%);
+    animation:slidebg 5s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+        background-position:20vw;
+    }
+}
 
 @media (max-width: 756px) {
     .search {

@@ -12,7 +12,7 @@ const OrderBy = ({data, setData}) => {
     return(
         <>
             <select className="button__orderby" onChange={handleSort}>
-                <option value="" disabled selected>Select your option</option>
+                <option value="" disabled selected>Order by</option>
                 <option value="author">Author</option>
                 <option value="publishedAt">Date</option>
                 <option value="title">Title</option>
