@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 import FilterInput from '../../components/Filter';
 import OrderBy from '../../components/OrderBy';
@@ -35,13 +36,17 @@ function Home({ data, setData, setQuery }) {
       </section>
       <ul className="container">
       {data &&
-          data.map(({ id, title, urlToImage, author, publishedAt }) => (
-            <li className="container__list" key={id}>
-              <span className='container__date'>{formatDate(publishedAt)}</span>
-              <h3 className="container__heading">{formatText(title)}</h3>
-              <img className="container__image"src={urlToImage}/>
-              <span className='container__author'>{ author ? `By ${formatText(author)}` : ""}</span>
+          data.map(({ title, urlToImage, author, publishedAt }, index) => (
+          <Link state={{new: data[index]}} to={{
+            pathname: "/content"
+          }}>
+            <li className="container__list" key={title}>
+                <span className='container__date'>{formatDate(publishedAt)}</span>
+                <h3 className="container__heading">{formatText(title)}</h3>
+                <img className="container__image"src={urlToImage}/>
+                <span className='container__author'>{ author ? `By ${formatText(author)}` : ""}</span>
             </li>
+          </Link>
           ))}
       </ul>
     </>
