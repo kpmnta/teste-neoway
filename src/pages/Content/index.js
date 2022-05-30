@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import './styles.css'
 
 const Content = () => {
     const location = useLocation();
@@ -16,10 +17,12 @@ const Content = () => {
                 ></div>
                 <p className="content__title">{newsContent.title}</p>
                 <span className="content__especifications">Published by {newsContent.author} @ <a href={newsContent.url}>{newsContent.source.name}</a></span>
-                <p className="content__text">{newsContent.description}</p>
-                <p className="content__text">{newsContent.content}</p>
+                <div className="content__text">
+                    <p>{newsContent.description}</p>
+                    <p>{newsContent.content}</p>
+                </div>
                 <footer className="content__footer">
-                    <Link className="content__footer__link" to="/">Go back</Link>
+                    <Link className="content__footer__backLink" to="/">Go back</Link>
                     <a className="content__footer__link" href={newsContent.url}>Read All</a>
                 </footer>
             </article>
