@@ -14,7 +14,7 @@ function Home({ data, setData, setQuery }) {
 
   const formatText = (text) => {
     if (text && text.length > 80) {
-      let textSize = text.substring(0, 100);
+      let textSize = text.substring(0, 80);
       textSize = `${textSize}...`
       return textSize;
     } else {
@@ -23,7 +23,7 @@ function Home({ data, setData, setQuery }) {
   }
 
   return (
-    <>
+    <main>
       <h1>Your favourite news outlet!</h1>
       <section className='filters'>
         <FilterInput 
@@ -37,7 +37,7 @@ function Home({ data, setData, setQuery }) {
       <ul className="container">
       {data &&
           data.map(({ title, urlToImage, author, publishedAt }, index) => (
-          <Link state={{new: data[index]}} to={{
+          <Link className="container__link" state={{new: data[index]}} to={{
             pathname: "/content"
           }}>
             <li className="container__list" key={title}>
@@ -49,7 +49,7 @@ function Home({ data, setData, setQuery }) {
           </Link>
           ))}
       </ul>
-    </>
+    </main>
   );
 }
 

@@ -21,9 +21,9 @@ const FilterInput = ({setQuery}) => {
             type="text" 
             value={ search } 
             onChange={ updateSearch }
-            placeholder="digite"
+            placeholder="type here"
             />
-            <button className="search__button">Buscar</button>
+            <button className="search__button">Search</button>
       </form>
     );
 }

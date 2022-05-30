@@ -1,3 +1,7 @@
+main {
+  padding: 24px;
+}
+
 h1 {
     font-family: var(--fontBody);
     text-align: center;
@@ -20,6 +24,10 @@ h1 {
     justify-content: center;
     margin: 2rem 0;
   }
+
+  .container__link {
+    color: var(--colorText)
+  }
   
   .container__list {
     display: flex;
@@ -28,7 +36,7 @@ h1 {
     gap: 16px;
     max-width: 20vw;
     min-width: 170px;
-    min-height: 220px;
+    min-height: 335px;
     padding: 20px 10px;
     border-radius: 30px;
     background-color: var(--colorAccent);
@@ -56,3 +64,9 @@ h1 {
     font-size: 0.6rem;
     font-family: var(--fontBody);
   }
+
+  @media (max-width: 756px) {
+    .container__list {
+      min-height: 275px;
+    }
+}
