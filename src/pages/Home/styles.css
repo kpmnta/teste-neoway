@@ -3,84 +3,84 @@
 }
 
 .home h1 {
-    font-family: var(--fontBody);
-    text-align: center;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
+  font-family: var(--fontBody);
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
   
-  .home__filters {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+.home__filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  .home__results {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    font-family: var(--fontBody);
-  }
+.home__results {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--fontBody);
+}
 
-  .home__results span {
-    text-transform: capitalize;
-    text-decoration: underline;
-  }
-  
-  .home__cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3vw;
-    justify-content: center;
-    margin: 2rem 0;
-  }
+.home__results span {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
 
-  .cards__link {
-    color: var(--colorText)
-  }
-  
+.home__cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.cards__link {
+  color: var(--colorText)
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 16px;
+  max-width: 20vw;
+  min-width: 200px;
+  min-height: 335px;
+  padding: 20px 10px;
+  border-radius: 30px;
+  background-color: var(--colorAccent);
+  cursor: pointer;
+  transition: filter 300ms;
+}
+
+.cards__author {
+  font-size: 0.75rem;
+  font-family: var(--fontBody);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cards__heading {
+  font-family: var(--fontHeading);
+}
+
+.cards__image {
+  border-radius: 30px;
+  max-width: calc(30vw - 20px);
+  min-width: 150px;
+}
+
+.cards__date {
+  text-align: right;
+  font-size: 0.6rem;
+  font-family: var(--fontBody);
+}
+
+@media (max-width: 756px) {
   .cards__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 16px;
-    max-width: 20vw;
-    min-width: 170px;
-    min-height: 335px;
-    padding: 20px 10px;
-    border-radius: 30px;
-    background-color: var(--colorAccent);
-    cursor: pointer;
-    transition: filter 300ms;
+    min-height: 275px;
   }
-  
-  .cards__author {
-    font-size: 0.75rem;
-    font-family: var(--fontBody);
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  
-  .cards__heading {
-    font-family: var(--fontHeading);
-  }
-  
-  .cards__image {
-    border-radius: 30px;
-    max-width: calc(30vw - 20px);
-    min-width: 150px;
-  }
-  
-  .cards__date {
-    text-align: right;
-    font-size: 0.6rem;
-    font-family: var(--fontBody);
-  }
-
-  @media (max-width: 756px) {
-    .cards__list {
-      min-height: 275px;
-    }
 }

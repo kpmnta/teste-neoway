@@ -7,7 +7,6 @@ const Content = () => {
     const location = useLocation();
     const newsContent = location.state.new
 
-    console.log('news', newsContent)
     return(
         <>
             <article className="content">
