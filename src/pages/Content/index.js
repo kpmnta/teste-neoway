@@ -1,12 +1,22 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import React, {useEffect} from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import './styles.css'
 
 const Content = () => {
     const location = useLocation();
-    const newsContent = location.state.new
+    const newsContent = location.state?.new;
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        if (!newsContent) {
+            navigate('/');
+        }
+    }, [])
 
+    if (!newsContent) {
+        return null
+    }
+    
     return(
         <>
             <article className="content">
