@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/neoway-kai/static/css/main.04d10953.css",
-    "main.js": "/neoway-kai/static/js/main.6d7ab6ba.js",
-    "index.html": "/neoway-kai/index.html",
-    "main.04d10953.css.map": "/neoway-kai/static/css/main.04d10953.css.map",
-    "main.6d7ab6ba.js.map": "/neoway-kai/static/js/main.6d7ab6ba.js.map"
+    "main.css": "/teste-neoway/static/css/main.04d10953.css",
+    "main.js": "/teste-neoway/static/js/main.6d7ab6ba.js",
+    "index.html": "/teste-neoway/index.html",
+    "main.04d10953.css.map": "/teste-neoway/static/css/main.04d10953.css.map",
+    "main.6d7ab6ba.js.map": "/teste-neoway/static/js/main.6d7ab6ba.js.map"
   },
   "entrypoints": [
     "static/css/main.04d10953.css",
