@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 import FilterInput from '../../components/Filter';
 import OrderBy from '../../components/OrderBy';
 import Loading from '../../components/Loading'
+import ArrowUp from '../../components/ArrowUp';
 
 function Home({ data, setData, setQuery, query, isLoading }) {
+  const [showScroll, setShowScroll] = useState(false)
 
   const formatDate = (date) => {
     const splitedDate = date.split('T');
@@ -57,6 +59,10 @@ function Home({ data, setData, setQuery, query, isLoading }) {
             ))}
         </ul>
       )}
+      <ArrowUp 
+        setShowScroll={setShowScroll}
+        showScroll={showScroll}
+      />
     </main>
   );
 }
