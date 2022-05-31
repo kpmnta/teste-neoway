@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/neoway-kai/static/css/main.04d10953.css",
+    "main.js": "/neoway-kai/static/js/main.6d7ab6ba.js",
+    "index.html": "/neoway-kai/index.html",
+    "main.04d10953.css.map": "/neoway-kai/static/css/main.04d10953.css.map",
+    "main.6d7ab6ba.js.map": "/neoway-kai/static/js/main.6d7ab6ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04d10953.css",
+    "static/js/main.6d7ab6ba.js"
+  ]
+}
