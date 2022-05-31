@@ -5,19 +5,21 @@ import Content from './pages/Content';
 
 function App() {
   const API_KEY = "cd3fbaf6482e418e83ff450578540d57"; 
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [query, setQuery] = useState('');
+
   let today = new Date();
   let date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`;
 
-  const [data, setData] = useState([]);
-  const [query, setQuery] = useState('');
-
   useEffect(() => {
     if (query) {
+      setIsLoading(true);
       fetch(`https://newsapi.org/v2/everything?q=${query}&from=${date}&sortBy=popularity&apiKey=${API_KEY}&pageSize=100`)
        .then((response) => response.json())
        .then((actualData) => {
-         console.log('actual', actualData)
         setData(actualData.articles);
+        setIsLoading(false);
       })
     }
   }, [query]);
@@ -32,6 +34,7 @@ function App() {
               setData={setData} 
               query={query} 
               setQuery={setQuery} 
+              isLoading={isLoading}
             />
           }/>
           <Route path="/content" element={<Content />} />
