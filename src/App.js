@@ -9,10 +9,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState('');
 
-  let today = new Date();
-  let date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`;
-
   useEffect(() => {
+    const today = new Date();
+    const date = `${today.getFullYear()}-${(today.getMonth()+1)}-${today.getDate()}`;
+    
     if (query) {
       setIsLoading(true);
       fetch(`https://newsapi.org/v2/everything?q=${query}&from=${date}&sortBy=popularity&apiKey=${API_KEY}&pageSize=100`)
