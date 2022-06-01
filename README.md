@@ -18,9 +18,10 @@ Você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 - [VSCode](https://code.visualstudio.com/)
 
 ### Rodando o projeto
-Para rodar o projeto, clone esse repositório na sua máquina, em seguida dentro da pasta do projeto rode o seguinte comando:
+Para rodar o projeto, clone esse repositório na sua máquina, em seguida dentro da pasta do projeto rode os seguintes comandos:
 
-#### `npm start`
+#### `npm install` para instalar todas as dependências 
+#### `npm start` para rodar o projeto 
 
 Você verá o projeto online no link [http://localhost:3000/teste-neoway](http://localhost:3000/teste-neoway)
 
